@@ -140,10 +140,10 @@ function App() {
           </g>
         </svg>
       )}
-      <div className="absolute bottom-4 left-[50%] translate-x-[-50%] select-none z-10">
+      <div className="absolute bottom-4 left-[50%] translate-x-[-50%] select-none z-10 text-center">
         You can create your own profile card by{' '}
         <a
-          className="font-bold text-blue-500 hover:underline text-center"
+          className="font-bold text-blue-500 hover:underline"
           href="https://github.com/sasuke-7/lanyard-card-example"
           target="_blank"
           rel="noreferrer"
