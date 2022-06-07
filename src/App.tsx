@@ -71,14 +71,14 @@ function App() {
             <div className="mt-6">
               <h5 className="ml-1 mb-1 text-sm font-bold text-gray-200">Listening</h5>
               <div className="flex flex-row items-center rounded-lg overflow-hidden p-4 bg-[rgba(0,0,0,.2)]">
-                <div className="w-20 min-w-[5rem] relative mr-4">
+                <div className="relative mr-4">
                   <img
-                    className="rounded-xl"
+                    className="w-20 h-20 min-w-[5rem] rounded-xl"
                     src={`${presence.spotify!.album_art_url}`}
                     alt={`${presence.spotify!.song} art`}
                   />
                   <img
-                    className="w-8 border-2 rounded-full bg-black border-black absolute bottom-[-8px] right-[-8px]"
+                    className="w-8 h-8 border-2 rounded-full bg-black border-black absolute bottom-[-8px] right-[-8px]"
                     src="/static/images/spotify.svg"
                     alt="Spotify Icon"
                   />
@@ -94,9 +94,9 @@ function App() {
             <div className="mt-4">
               <h5 className="ml-1 mb-1 text-sm font-bold text-gray-200">Doing something</h5>
               <div className="flex flex-row items-center rounded-lg overflow-hidden p-4 bg-[rgba(0,0,0,.2)]">
-                <div className="w-20 min-w-[5rem] relative mr-4">
+                <div className="relative mr-4">
                   <img
-                    className="rounded-xl"
+                    className="w-20 h-20 min-w-[5rem] rounded-xl"
                     src={
                       activity.assets?.large_image
                         ? getAssetUrl(activity.application_id!, activity.assets.large_image)
@@ -106,7 +106,7 @@ function App() {
                   />
                   {activity.assets?.small_image && (
                     <img
-                      className="w-8 border-2 rounded-full bg-black border-black absolute bottom-[-8px] right-[-8px]"
+                      className="w-8 h-8 border-2 rounded-full bg-black border-black absolute bottom-[-8px] right-[-8px]"
                       src={getAssetUrl(activity.application_id!, activity.assets.small_image!)}
                       alt="App Small Image"
                     />
