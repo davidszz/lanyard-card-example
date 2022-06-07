@@ -146,7 +146,7 @@ function App() {
           </g>
         </svg>
       )}
-      <div className="absolute bottom-4 left-[50%] translate-x-[-50%] select-none z-10 text-center w-11/12">
+      <div className="fixed bottom-4 left-[50%] translate-x-[-50%] select-none z-10 text-center w-11/12">
         You can create your own profile card by{' '}
         <a
           className="font-bold text-blue-500 hover:underline"
