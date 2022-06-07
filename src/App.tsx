@@ -100,7 +100,7 @@ function App() {
             <div className="mt-4">
               <h5 className="ml-1 mb-1 text-sm font-bold text-gray-200">Doing something</h5>
               <div className="flex flex-row items-center rounded-lg overflow-hidden p-4 bg-[rgba(0,0,0,.2)]">
-                <div className="w-20 h-20 min-w-[5rem] flex items-center justify-center relative mr-4">
+                <div className="w-20 h-20 min-w-[5rem] flex items-center justify-center bg-black rounded-xl relative mr-4">
                   <img
                     className="rounded-xl"
                     src={
