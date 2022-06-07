@@ -150,7 +150,7 @@ function App() {
         You can create your own profile card by{' '}
         <a
           className="font-bold text-blue-500 hover:underline"
-          href="https://github.com/sasuke-7/lanyard-card-example"
+          href="https://github.com/davidszz/lanyard-card-example"
           target="_blank"
           rel="noreferrer"
         >
