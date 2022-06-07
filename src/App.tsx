@@ -33,7 +33,7 @@ function App() {
   }, [presence]);
 
   const activity = useMemo(() => {
-    return presence?.activities.find((x) => x.type === 0);
+    return presence?.activities?.find((x) => x.type === 0);
   }, [presence]);
 
   return (
@@ -47,7 +47,13 @@ function App() {
           <div className="flex flex-col items-center sm:flex-row">
             <img
               className="w-28 h-28 rounded-full mb-4 sm:mb-0 sm:mr-4"
-              src={`https://cdn.discordapp.com/avatars/${user!.id}/${user!.avatar}.png?size=128`}
+              src={
+                user!.avatar
+                  ? `https://cdn.discordapp.com/avatars/${user!.id}/${user!.avatar}.png?size=128`
+                  : `https://cdn.discordapp.com/embed/avatars/${
+                      parseInt(user!.discriminator.slice(-1), 10) % 5
+                    }.png`
+              }
               alt="User Avatar"
             />
             <div>
@@ -71,9 +77,9 @@ function App() {
             <div className="mt-6">
               <h5 className="ml-1 mb-1 text-sm font-bold text-gray-200">Listening</h5>
               <div className="flex flex-row items-center rounded-lg overflow-hidden p-4 bg-[rgba(0,0,0,.2)]">
-                <div className="relative mr-4">
+                <div className="w-20 h-20 min-w-[5rem] flex items-center justify-center bg-black relative mr-4">
                   <img
-                    className="w-20 h-20 min-w-[5rem] rounded-xl"
+                    className="rounded-xl"
                     src={`${presence.spotify!.album_art_url}`}
                     alt={`${presence.spotify!.song} art`}
                   />
@@ -94,9 +100,9 @@ function App() {
             <div className="mt-4">
               <h5 className="ml-1 mb-1 text-sm font-bold text-gray-200">Doing something</h5>
               <div className="flex flex-row items-center rounded-lg overflow-hidden p-4 bg-[rgba(0,0,0,.2)]">
-                <div className="relative mr-4">
+                <div className="w-20 h-20 min-w-[5rem] flex items-center justify-center bg-black relative mr-4">
                   <img
-                    className="w-20 h-20 min-w-[5rem] rounded-xl"
+                    className="rounded-xl"
                     src={
                       activity.assets?.large_image
                         ? getAssetUrl(activity.application_id!, activity.assets.large_image)
