@@ -22,7 +22,7 @@ const getAssetUrl = (appId: string, asset: string) =>
     : `https://cdn.discordapp.com/${appId}/${asset}.png`;
 
 function App() {
-  const presence = useLanyardWs('YOUR_ID');
+  const presence = useLanyardWs('1057022869747548160');
 
   const user = useMemo(() => {
     return presence?.discord_user;
